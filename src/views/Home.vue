@@ -1,7 +1,7 @@
 <template>
   <el-container class="content">
     <el-header>
-      <el-row>
+      <!-- <el-row>
         <el-col :xs="0" :sm="1" :md="2" :lg="5" :xl="5"></el-col>
         <el-col :xs="24" :sm="22" :md="20" :lg="14" :xl="14" class="header">
           <img src="../assets/logo_complete.png" alt="logo" class="logo" />
@@ -11,7 +11,8 @@
           </span>
         </el-col>
         <el-col :xs="0" :sm="1" :md="2" :lg="5" :xl="5"> </el-col>
-      </el-row>
+      </el-row> -->
+      <Header/>
     </el-header>
 
     <el-main>
@@ -21,6 +22,7 @@
         :fit="cover"
         :height="900"
       ></el-image>
+
       <section>
         <div class="h1">百答智能客服机器人</div>
         <el-row>
@@ -49,6 +51,7 @@
           <el-col :span="6"></el-col>
         </el-row>
       </section>
+
       <!-- 产品特色 -->
       <section>
         <div class="h1 feature-title">产品特色</div>
@@ -318,6 +321,7 @@
           </el-row>
         </div>
       </section>
+
       <section>
         <div class="h1 servicc-title s3">产品服务</div>
         <div class="service-box">
@@ -350,6 +354,7 @@
           </el-row>
         </div>
       </section>
+      
       <section>
         <div class="h1 client-title s4">合作客户</div>
         <el-row>
@@ -402,11 +407,13 @@
 <script>
 import { reactive } from "vue";
 // @ is an alias to /src
-// import HelloWorld from '@/components/HelloWorld.vue'
+import Header from '@/components/Header.vue'
 
 export default {
   name: "Home",
-  components: {},
+  components: {
+    Header,
+  },
   setup() {
     const fits = reactive(["fill", "contain", "cover", "none", "scale-down"]);
     return {
@@ -430,24 +437,6 @@ section {
 }
 .el-header {
   margin-bottom: -1rem;
-}
-.header {
-  position: relative;
-}
-.logo {
-  transform: scale(0.7, 0.7);
-  padding-bottom: 1rem;
-  padding-left: 2.8rem;
-}
-.el-button {
-  font-weight: bold;
-  background-color: #2d8cf0;
-}
-.button-group {
-  position: absolute;
-  right: 0;
-  top: 0.9rem;
-  transform: translateX(-5.5rem);
 }
 
 .el-main {
