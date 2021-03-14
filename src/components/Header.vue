@@ -11,9 +11,11 @@
         <el-col :xs="0" :sm="1" :md="2" :lg="5" :xl="5"> </el-col>
     </el-row>
 </template>
+<script>
 export default {
     name: "Header"
 }
+</script>
 <style scoped>
 .header {
     position: relative;

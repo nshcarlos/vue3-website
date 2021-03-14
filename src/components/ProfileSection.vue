@@ -26,9 +26,11 @@
         <el-col :span="6"></el-col>
     </el-row>
 </template>
+<script>
 export default {
     name: "Profile"
 }
+</script>
 <style scoped>
 .h1 {
     font-size: 2rem;
