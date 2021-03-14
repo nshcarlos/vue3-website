@@ -29,7 +29,7 @@
 </template>
 <script>
 export default {
-    name: "Service",
+    name: "Client",
     setup(props) {
         const serviceList = [{
             id: 1,
