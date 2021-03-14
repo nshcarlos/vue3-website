@@ -29,7 +29,9 @@
       <!-- 产品特色 -->
       <Product-features></Product-features>
 
-      <section>
+      <!-- 产品服务 -->
+      <Service-section></Service-section>
+      <!-- <section>
         <div class="h1 servicc-title s3">产品服务</div>
         <div class="service-box">
           <el-row>
@@ -60,7 +62,7 @@
             <el-col :xs="0" :sm="1" :md="1" :lg="6" :xl="6"></el-col>
           </el-row>
         </div>
-      </section>
+      </section> -->
 
       <section>
         <div class="h1 client-title s4">合作客户</div>
@@ -117,13 +119,15 @@ import { reactive } from "vue";
 import Header from '@/components/Header.vue'
 import ProfileSection from '@/components/ProfileSection.vue'
 import ProductFeatures from '@/components/ProductFeatures.vue'
+import ServiceSection from '@/components/ServiceSection.vue'
 
 export default {
   name: "Home",
   components: {
     Header,
     ProfileSection,
-    ProductFeatures
+    ProductFeatures,
+    ServiceSection
   },
   setup() {
     const fits = reactive(["fill", "contain", "cover", "none", "scale-down"]);
@@ -164,50 +168,6 @@ section {
 }
 
 
-.s3 {
-  margin-top: -4rem;
-  margin-bottom: 1.4rem;
-}
-.service-box {
-  padding-left: 2.4rem;
-}
-.service-list {
-  padding-right: 2.4rem;
-  display: flex;
-  justify-content: space-between;
-}
-.service-item {
-  position: relative;
-}
-.service-item > img {
-  width: 100%;
-  height: 100%;
-}
-.mask {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  background: rgba(0, 0, 0, 0.5);
-}
-.service-title,
-.service-desc {
-  color: #fff;
-  font-size: 1rem;
-  font-weight: bold;
-  text-align: center;
-}
-.service-title {
-  position: absolute;
-  top: 1rem;
-  left: 5.2rem;
-}
-.service-desc {
-  position: absolute;
-  top: 5rem;
-  left: 1.2rem;
-}
 .client-row {
   display: flex;
   flex-direction: row;
