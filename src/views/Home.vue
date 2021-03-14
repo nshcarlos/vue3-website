@@ -31,66 +31,9 @@
 
       <!-- 产品服务 -->
       <Service-section></Service-section>
-      <!-- <section>
-        <div class="h1 servicc-title s3">产品服务</div>
-        <div class="service-box">
-          <el-row>
-            <el-col :xs="0" :sm="1" :md="1" :lg="6" :xl="6"></el-col>
-            <el-col :xs="24" :sm="22" :md="22" :lg="12" :xl="12" class="service-list">
-              <div class="service-item">
-                <img src="../assets/service_1.jpg" alt="service_1" />
-                <div class="mask">
-                  <p class="service-title">管理维护</p>
-                  <p class="service-desc">资深运营人员协助管理维护</p>
-                </div>
-              </div>
-              <div class="service-item">
-                <img src="../assets/service_2.jpg" alt="service_2" />
-                <div class="mask">
-                  <p class="service-title">对接响应</p>
-                  <p class="service-desc">实时在线答疑，指导配置技巧</p>
-                </div>
-              </div>
-              <div class="service-item">
-                <img src="../assets/service_3.jpg" alt="service_3" />
-                <div class="mask">
-                  <p class="service-title">活动助力</p>
-                  <p class="service-desc">活动大促期间可提供现场支援</p>
-                </div>
-              </div>
-            </el-col>
-            <el-col :xs="0" :sm="1" :md="1" :lg="6" :xl="6"></el-col>
-          </el-row>
-        </div>
-      </section> -->
 
-      <section>
-        <div class="h1 client-title s4">合作客户</div>
-        <el-row>
-          <el-col :xs="0" :sm="1" :md="1" :lg="6" :xl="6"></el-col>
-          <el-col :xs="24" :sm="22" :md="22" :lg="12" :xl="12">
-            <el-row>
-              <el-col :span="24" class="client-row">
-                <div><img src="../assets/client_1.jpg" alt="" /></div>
-                <div><img src="../assets/client_2.png" alt="" /></div>
-                <div><img src="../assets/client_3.png" alt="" /></div>
-                <div><img src="../assets/client_4.png" alt="" /></div>
-                <div><img src="../assets/client_5.png" alt="" /></div>
-                <div><img src="../assets/client_6.png" alt="" /></div>
-              </el-col>
-              <el-col :span="24" class="client-row">
-                <div><img src="../assets/client_7.png" alt="" /></div>
-                <div><img src="../assets/client_8.png" alt="" /></div>
-                <div><img src="../assets/client_9.png" alt="" /></div>
-                <div><img src="../assets/client_10.png" alt="" /></div>
-                <div><img src="../assets/client_11.png" alt="" /></div>
-                <div><img src="../assets/client_more.png" alt="" /></div>
-              </el-col>
-            </el-row>
-          </el-col>
-          <el-col :xs="0" :sm="1" :md="1" :lg="6" :xl="6"></el-col>
-        </el-row>
-      </section>
+      <!-- 合作客户 -->
+      <client-section></client-section>
     </el-main>
 
     <el-footer>
@@ -120,6 +63,7 @@ import Header from '@/components/Header.vue'
 import ProfileSection from '@/components/ProfileSection.vue'
 import ProductFeatures from '@/components/ProductFeatures.vue'
 import ServiceSection from '@/components/ServiceSection.vue'
+import ClientSection from '@/components/ClientSection.vue'
 
 export default {
   name: "Home",
@@ -127,7 +71,8 @@ export default {
     Header,
     ProfileSection,
     ProductFeatures,
-    ServiceSection
+    ServiceSection,
+    ClientSection
   },
   setup() {
     const fits = reactive(["fill", "contain", "cover", "none", "scale-down"]);
@@ -165,17 +110,6 @@ section {
 }
 .el-main > .el-image {
   margin-bottom: 3rem;
-}
-
-
-.client-row {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  margin-bottom: 1rem;
-}
-.client-row > img {
-  flex-shrink: 0;
 }
 
 /* footer */
